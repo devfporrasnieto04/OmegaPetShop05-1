@@ -1,0 +1,19 @@
+[   {
+        "id" : "1",
+        "id_productos" : "1",
+        "id_pedidos" : "1",
+        "cantidad" : 48
+    },
+    {
+        "id" : "2",
+        "id_productos" : "2",
+        "id_pedidos" : "1",
+        "cantidad" : 90
+    },
+    {
+        "id" : "3",
+        "id_productos" : "3",
+        "id_pedidos" : "1",
+        "cantidad" : 5
+    }
+]

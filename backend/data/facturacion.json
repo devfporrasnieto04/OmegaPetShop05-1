@@ -1,0 +1,21 @@
+[
+    {
+        "id" : "1",
+        "id_clientes" : "1098241555",
+        "id_pedidos" : "1",
+        "total": 350000
+    },
+    {
+        "id" : "2",
+        "id_clientes" : "1098241555",
+        "id_pedidos" : "2",
+        "total": 250000
+    },
+    {
+        "id" : "3",
+        "id_clientes" : "1098241555",
+        "id_pedidos" : "3",
+        "total": 450000
+    }
+    
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "id" : "1015393381",
+        "id_tipodedocumento" : "cc",
+        "nombre" : "carlos",
+        "telefono" : "30044418469",
+        "direccion" : "calle 69a #68b _50",
+        "email" : "acerocamilo7@gmail.com",
+        "activo" : true
+    },
+    {
+        "id" : "654321987-6",
+        "id_tipodedocumento" : "nit",
+        "nombre" : "La tienda de carlos",
+        "telefono" : "3123420992",
+        "direccion" : "calle 69a #68b _50",
+        "email" : "tiendacarlos7@gmail.com",
+        "activo" : true
+    },
+    {
+        "id" : "91654987651",
+        "id_tipodedocumento" : "PA",
+        "nombre" : "julian ramirez",
+        "telefono" : "3002033104",
+        "direccion" : "calle 69a #68b _50",
+        "email" : "tiendacarlos7@gmail.com",
+        "activo" : true
+    }
+]

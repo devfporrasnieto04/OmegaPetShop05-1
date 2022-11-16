@@ -1,0 +1,26 @@
+[
+    {
+    "id" : "1",
+    "id_usuario" : "8603573", 
+    "nombre" : "Felipe Arroyo",
+    "email" : "feliarro05@gmail.com",
+    "tipoUsuario" : "administrador"
+    },
+
+    {
+        "id" : "2",
+        "id_usuario" : "123654789", 
+        "nombre" : "David Ramirez",
+        "email" : "dvdr17@gmail.com",
+        "tipoUsuario" : "tendero"
+    },
+
+    
+    {
+        "id" : "3",
+        "id_usuario" : "1596547", 
+        "nombre" : "Martina Rodriguez",
+        "email" : "martinro75@gmail.com",
+        "tipoUsuario" : "proveedor"
+    }
+]

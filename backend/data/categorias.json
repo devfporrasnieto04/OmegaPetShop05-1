@@ -1,0 +1,32 @@
+[
+    {
+        "id" : "1",
+        "nombre" : "Alimentos",
+        "descripcion" : "",
+        "activo" : true
+    },
+    {
+        "id" : "2",
+        "nombre" : "Medicamentos",
+        "descripcion" : "",
+        "activo" : false
+    },
+    {
+        "id" : "3",
+        "nombre" : "Medicinas",
+        "descripcion" : "",
+        "activo" : true
+    },
+    {
+        "id" : "4",
+        "nombre" : "Aseo",
+        "descripcion" : "",
+        "activo" : true
+    },
+    {
+        "id" : "5",
+        "nombre" : "Jugetes",
+        "descripcion" : "",
+        "activo" : true
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "id" : "1",
+        "id_categoria" : "1",
+        "nombre" : "Galletas",
+        "descripcion" : "",
+        "precio" : 2000,
+        "activo" : true
+    },
+    {
+        "id" : "2",
+        "id_categoria" : "1",
+        "nombre" : "Helados",
+        "descripcion" : "",
+        "precio" : 3000,
+        "activo" : false
+    },
+    {
+        "id" : "3",
+        "id_categoria" : "1",
+        "nombre" : "Croquetas",
+        "descripcion" : "",
+        "precio" : 4000,
+        "activo" : true
+    },
+    {
+        "id" : "4",
+        "id_categoria" : "4",
+        "nombre" : "Bolsas",
+        "descripcion" : "",
+        "precio" : 1000,
+        "activo" : true
+    },  
+    {
+        "id" : "5",
+        "id_categoria" : "5",
+        "nombre" : "Pelota maciza",
+        "descripcion" : "",
+        "precio" : 4000,
+        "activo" : true
+    }
+]
