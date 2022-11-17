@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Swal from 'sweetalert2';
-
+import { api } from '../../config'
 function ClientesBorrar(id)
 {    
     //const navegar = useNavigate()
@@ -10,7 +10,7 @@ function ClientesBorrar(id)
         //navegar('/')
         window.location.href="/clienteslistar";
     }
-    axios.delete(`/api/clientes/borrar/${id}`)
+    axios.delete(`${api.baseURL}/api/clientes/borrar/${id}`)
         .then(() => this.setState({ status: 'Borrado Exitoso' }));
 
 

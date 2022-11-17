@@ -2,13 +2,14 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import ProductosBorrar from './productosborrar';
+import { api } from '../../config'
 
 function ProductosListar()
 {
     const[dataProductos, setdataProductos] = useState([]);
 
     useEffect(()=>{
-        axios.get('/api/productos/listar').then(res => {
+        axios.get(api.baseURL+'/api/productos/listar').then(res => {
         console.log(res.data)
         setdataProductos(res.data)
         }).catch(err=>{console.log(err.stack)})
@@ -22,7 +23,7 @@ function ProductosListar()
                 <table className="table table-bordered">
                     <thead className="thead-dark">
                         <tr key={0}>
-                            <td colSpan={6} align="right"><Link to={`/productosagregar`}><li className='btn btn-success'>Agregar Pedido</li></Link></td>
+                            <td colSpan={6} align="right"><Link to={`/productosagregar`}><li className='btn btn-success'>Agregar Producto</li></Link></td>
                         </tr>
                         <tr key={0}>
                             <td align="center">Id</td>

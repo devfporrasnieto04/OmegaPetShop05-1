@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import { useParams, useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
+import { api } from '../../config'
 
 function ClientesEditar()
 {
@@ -15,7 +16,7 @@ function ClientesEditar()
     const[activo,setActivo] = useState('')
     const navegar = useNavigate()
     
-    useEffect(()=>{axios.get(`/api/clientes/cargar/${parametros.id}`).then(res=>{
+    useEffect(()=>{axios.get(`${api.baseURL}/api/clientes/cargar/${parametros.id}`).then(res=>{
         console.log(res.data[0])
         const dataClientes = res.data[0]
         setId_tipodedocumento(dataClientes.id_tipodedocumento)
@@ -42,7 +43,7 @@ function ClientesEditar()
     
         console.log(clienteeditar)
 
-        axios.post(`/api/clientes/editar/${parametros.id}`,clienteeditar).then(res=> {
+        axios.post(`${api.baseURL}/api/clientes/editar/${parametros.id}`,clienteeditar).then(res=> {
             console.log(res.data)
             Swal.fire({ position: 'center', icon: 'success', title: '¡Registro actualizado exitosamente!', showConfirmButton: false, timer: 1500 })
             navegar('/clienteslistar')

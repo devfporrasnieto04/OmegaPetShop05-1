@@ -34,7 +34,7 @@ function App()
           <Route path="/productosagregar" element={<ProductosAgregar/>}exact/>
           <Route path="/clienteslistar" element={<ClientesListar/>}exact/>
           <Route path="/clientesborrar" element={<ClientesBorrar/>}exact/>
-          <Route path="/clinteseditar/id" element={<ClientesEditar/>}exact/>
+          <Route path="/clienteseditar/:id" element={<ClientesEditar/>}exact/>
           <Route path="/clientesagregar" element={<ClientesAgregar/>}exact/>
         </Routes>
         </BrowserRouter>

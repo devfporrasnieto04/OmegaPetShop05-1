@@ -3,11 +3,11 @@ const router = express.Router();
 const controladorClientes = require("../controllers/controller_clientes");
 const auth = require('../middleware/auth');
 
-router.get("/listar", auth,controladorClientes);
-router.get("/cargar/:id", auth,controladorClientes);
-router.post("/agregar", auth,controladorClientes);
-router.post("/editar/:id", auth,controladorClientes);
-router.delete("/borrar/:id", auth,controladorClientes);
+router.get("/listar", controladorClientes);
+router.get("/cargar/:id", controladorClientes);
+router.post("/agregar", controladorClientes);
+router.post("/editar/:id", controladorClientes);
+router.delete("/borrar/:id", controladorClientes);
 
 
 module.exports = router;

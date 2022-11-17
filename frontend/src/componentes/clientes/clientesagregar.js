@@ -3,6 +3,7 @@ import uniquid from 'uniqid';
 import React, {useState} from 'react';
 import {useNavigate} from 'react-router';
 import Swal from 'sweetalert2';
+import { api } from '../../config'
 
 function ClientesAgregar()
 {
@@ -29,7 +30,7 @@ function ClientesAgregar()
     
         console.log(clienteinsertar)
 
-        axios.post(`/api/clientes/agregar`,clienteinsertar).then(res => {
+        axios.post(api.baseURL+`/api/clientes/agregar`,clienteinsertar).then(res => {
             console.log(res.data)
             Swal.fire({ position: 'center', icon: 'success', title: '¡Registro agregado exitosamente!', showConfirmButton: false, timer: 1500 })
             navegar('/clienteslistar')
