@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import { useParams, useNavigate } from 'react-router';
 import Swal from 'sweetalert2';
+import { api } from '../../config'
 
 function ProductosEditar()
 {
@@ -37,7 +38,7 @@ function ProductosEditar()
     
         console.log(productoeditar)
 
-        axios.put(`/api/productos/editar/${parametros.id}`,productoeditar).then(res=> {
+        axios.put(`${api.baseURL}/api/productos/editar/${parametros.id}`,productoeditar).then(res=> {
             console.log(res.data)
             Swal.fire({ position: 'center', icon: 'success', title: '¡Registro actualizado exitosamente!', showConfirmButton: false, timer: 1500 })
             navegar('/productoslistar')

@@ -11,6 +11,11 @@ import ClientesBorrar from "./componentes/clientes/clientesborrar"
 import ClientesEditar from "./componentes/clientes/clienteseditar"
 import ClientesAgregar from "./componentes/clientes/clientesagregar"
 
+import PedidosListar from "./componentes/pedidos/pedidoslistar"
+import PedidosBorrar from './componentes/pedidos/pedidosborrar';
+import PedidosEditar from "./componentes/pedidos/pedidoseditar"
+import PedidosAgregar from "./componentes/pedidos/pedidosagregar"
+
 
 
 import Login from './paginas/auth/Login';
@@ -36,6 +41,10 @@ function App()
           <Route path="/clientesborrar" element={<ClientesBorrar/>}exact/>
           <Route path="/clienteseditar/:id" element={<ClientesEditar/>}exact/>
           <Route path="/clientesagregar" element={<ClientesAgregar/>}exact/>
+          <Route path="/pedidoslistar" element={<PedidosListar/>}exact/>
+          <Route path="/pedidosborrar" element={<PedidosBorrar/>}exact/>
+          <Route path="/pedidoseditar/:id" element={<PedidosEditar/>}exact/>
+          <Route path="/pedidosagregar" element={<PedidosAgregar/>}exact/>
         </Routes>
         </BrowserRouter>
       </Fragment>

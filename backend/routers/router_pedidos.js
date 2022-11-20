@@ -7,7 +7,7 @@ router.get("/listar", auth,controladorPedidos);
 router.get("/cargar/:id", auth,controladorPedidos);
 router.post("/agregar", auth,controladorPedidos);
 router.post("/editar/:id", auth,controladorPedidos);
-router.delete("/borrar:id", auth,controladorPedidos);
+router.delete("/borrar/:id", auth,controladorPedidos);
 
 
 

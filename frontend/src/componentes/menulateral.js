@@ -11,7 +11,7 @@ function MenuLateral()
                                 <i className="icon-speedometer"></i><span>Inicio</span>
                             </a>                
                         </li>
-                        <li className="nav-level">Procesos</li>
+                        <li className="nav-level">Productos</li>
                         <li className="treeview"><a className="waves-effect waves-dark" href="/productoslistar"><i className="icon-briefcase"></i><span>Productos</span><i className="icon-arrow-down"></i></a>
                             <ul className="treeview-menu">
                                 <li><a className="waves-effect waves-dark" href="/productoslistar"><i className="icon-arrow-right"></i>Listar Productos</a></li>
@@ -24,6 +24,14 @@ function MenuLateral()
                             <ul className="treeview-menu">
                                 <li><a className="waves-effect waves-dark" href="/clienteslistar"><i className="icon-arrow-right"></i>Listar Clientes</a></li>
                                 <li><a className="waves-effect waves-dark" href="/clientesagregar"><i className="icon-arrow-right"></i>Agregar Clientes</a></li>
+                            </ul>
+                        </li>
+
+                        <li className="nav-level">Pedidos</li>
+                        <li className="treeview"><a className="waves-effect waves-dark" href="/pedidoslistar"><i className="icon-docs"></i><span>Pedidos</span><i className="icon-arrow-down"></i></a>
+                            <ul className="treeview-menu">
+                                <li><a className="waves-effect waves-dark" href="/pedidoslistar"><i className="icon-arrow-right"></i>Listar Pedidos</a></li>
+                                <li><a className="waves-effect waves-dark" href="/pedidosagregar"><i className="icon-arrow-right"></i>Agregar Pedidos</a></li>
                             </ul>
                         </li>
                 </ul>
