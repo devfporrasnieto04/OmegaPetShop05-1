@@ -11,6 +11,7 @@ function ProductosEditar()
     const[id_categoria,setIdCategoria] = useState('')
     const[nombre,setNombre] = useState('')
     const[precio,setPrecio] = useState('')
+    const[descripcion, setDescripcion] = useState('');
     const[activo,setActivo] = useState('')
     const navegar = useNavigate()
 
@@ -21,6 +22,7 @@ function ProductosEditar()
         setIdCategoria(dataProductos.id_categoria)
         setNombre(dataProductos.nombre)
         setPrecio(dataProductos.precio)
+        setDescripcion(dataProductos.descripcion)
         setActivo(dataProductos.activo)
         // eslint-disable-next-line react-hooks/exhaustive-deps
         })},[]);
@@ -33,6 +35,7 @@ function ProductosEditar()
         id_categoria: id_categoria,
         nombre: nombre,
         precio: precio,
+        descripcion: descripcion,
         activo: activo
         }
     
@@ -67,6 +70,10 @@ return(
                 <div className="mb-3">
                     <label htmlFor="precio" className="form-label">Precio</label>
                     <input type="text" className="form-control" id="precio" value={precio} onChange={(e)=>{setPrecio(e.target.value)}}></input>
+                </div>
+                 <div className="mb-3">
+                    <label htmlFor="precio" className="form-label">Descripcion</label>
+                    <input type="text" className="form-control" id="precio" value={descripcion} onChange={(e)=>{setDescripcion(e.target.value)}}></input>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="activo" className="form-label">Activo</label>

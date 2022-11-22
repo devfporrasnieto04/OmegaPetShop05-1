@@ -82,15 +82,15 @@ function PedidosEditar()
                             <form>
                                 <div className="form-group">
                                     <label htmlFor="id_cliente">Id Cliente</label>
-                                    <input type="text" className="form-control"id="id_cliente" value={id_cliente} onChange={(e)=>{setIdCliente(e.target.value)}} placeholder="Categoria"></input>
+                                    <input type="text" className="form-control"id="id_cliente" value={id_cliente} onChange={(e)=>{setIdCliente(e.target.value)}} placeholder="Id Cliente"></input>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="fecha">fecha</label>
-                                    <input type="date" className="form-control" id="fecha" value={fecha} onChange={(e)=>{setFecha(e.target.value)}} placeholder="fecha"></input>
+                                    <label htmlFor="fecha">Fecha</label>
+                                    <input type="date" className="form-control" id="fecha" value={fecha} onChange={(e)=>{setFecha(e.target.value)}} placeholder="Fecha"></input>
                                 </div>
                                 <div className="form-group">
-                                    <label htmlFor="precio">Valor</label>
-                                    <input type="text" className="form-control" id="precio" value={valor} onChange={(e)=>{setValor(e.target.value)}}  placeholder="Precio"></input>
+                                    <label htmlFor="valor">Valor</label>
+                                    <input type="text" className="form-control" id="valor" value={valor} onChange={(e)=>{setValor(e.target.value)}}  placeholder="Valor"></input>
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="activo">Activo</label>

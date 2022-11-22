@@ -5,11 +5,23 @@ import {useNavigate} from 'react-router';
 import Swal from 'sweetalert2';
 import { api } from '../../config'
 
+const token = localStorage.getItem("token");
+    let bearer;
+    if (token === "") {
+        bearer = "";
+    } else {
+        bearer = `${token}`;
+    }
+    const config = {
+        headers: {'Content-Type': 'application/json', 
+        'x-auth-token': bearer}
+    }
+
 function PedidosAgregar()
 {
     const[id_cliente,setIdCliente] = useState('')
-    const[fecha,setFecha] = useState('')
     const[valor,setValor] = useState('')
+    const[fecha,setFecha] = useState('')
     const[activo,setActivo] = useState('')
     const navegar = useNavigate()
 
@@ -25,7 +37,7 @@ function PedidosAgregar()
     
         console.log(productoinsertar)
 
-        axios.post(`${api.baseURL}/api/productos/agregar`,productoinsertar).then(res => {
+        axios.post(`${api.baseURL}/api/productos/agregar`,productoinsertar, config).then(res => {
             console.log(res.data)
             Swal.fire({ position: 'center', icon: 'success', title: '¡Registro agregado exitosamente!', showConfirmButton: false, timer: 1500 })
             navegar('/pedidoslistar')
@@ -40,7 +52,7 @@ function PedidosAgregar()
 
 return(
     <div className='container mt-5'>
-        <h4>Producto</h4>
+        <h4>Pedido</h4>
         <div className='row'>
             <div className='col-md-12'>
                 <div className="mb-3">
@@ -49,11 +61,11 @@ return(
                 </div>
                 <div className="mb-3">
                     <label htmlFor="nombre" className="form-label">fecha</label>
-                    <input type="date" className="form-control" id="nombre" value={fecha} onChange={(e)=>{setFecha(e.target.value)}}></input>
+                    <input type="date" className="form-control" id="Fecha" value={fecha} onChange={(e)=>{setFecha(e.target.value)}}></input>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="precio" className="form-label">Valor</label>
-                    <input type="text" className="form-control" id="precio" value={valor} onChange={(e)=>{setValor(e.target.value)}}></input>
+                    <label htmlFor="Valor" className="form-label">Valor</label>
+                    <input type="text" className="form-control" id="Valor" value={valor} onChange={(e)=>{setValor(e.target.value)}}></input>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="activo" className="form-label">Activo</label>

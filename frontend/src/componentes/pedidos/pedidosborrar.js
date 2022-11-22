@@ -4,6 +4,19 @@ import { api } from '../../config';
 //import {useNavigate} from 'react-router'
 function PedidosBorrar(id)
 {    
+    const token = localStorage.getItem("token");
+    let bearer;
+    if (token === "") {
+        bearer = "";
+    } else {
+        bearer = `${token}`;
+    }
+    const config = {
+        headers: {
+        "Content-Type": "application/json",
+        "x-auth-token": bearer,
+        },
+    };
 
     function pedidosRefrescar()
     {
@@ -11,7 +24,7 @@ function PedidosBorrar(id)
         window.location.href="/pedidoslistar";
         //navegar("/pedidoslistar")
     }
-    axios.delete(`${api.baseURL}/api/pedidos/borrar/${id}`)
+    axios.delete(api.baseURL+`/api/pedidos/borrar/${id}`,config)
     .then((response) => this.setState({ status: 'Borrado Exitoso' }));
 
     const swalWithBootstrapButtons = Swal.mixin({
@@ -30,19 +43,6 @@ function PedidosBorrar(id)
         reverseButtons: false
         }).then((result) => {
         if (result.isConfirmed) {
-            const token = localStorage.getItem("token");
-            let bearer;
-            if (token === "") {
-                bearer = "";
-            } else {
-                bearer = `${token}`;
-            }
-            const config = {
-                headers: {
-                "Content-Type": "application/json",
-                "x-auth-token": bearer,
-                },
-            };
         
         pedidosRefrescar()
 

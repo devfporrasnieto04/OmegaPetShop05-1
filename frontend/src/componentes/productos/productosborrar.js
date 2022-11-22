@@ -11,7 +11,7 @@ function ProductosBorrar(id)
         //navegar('/')
         window.location.href="/productoslistar";
     }
-    axios.delete(`/api/productos/borrar/${id}`)
+    axios.delete(api.baseURL+`/api/productos/borrar/${id}`)
         .then(() => this.setState({ status: 'Borrado Exitoso' }));
 
 
@@ -32,7 +32,7 @@ function ProductosBorrar(id)
         }).then((result) => {
         if (result.isConfirmed) {
         
-        axios.delete(`${api.baseURL}/api/productos/borrar/${id}`)
+        axios.delete(`/api/productos/borrar/${id}`)
         .then(() => this.setState({ status: 'Borrado Exitoso' }));
         
         productosRefrescar()

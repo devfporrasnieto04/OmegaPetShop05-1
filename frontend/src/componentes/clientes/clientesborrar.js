@@ -10,7 +10,7 @@ function ClientesBorrar(id)
         //navegar('/')
         window.location.href="/clienteslistar";
     }
-    axios.delete(`${api.baseURL}/api/clientes/borrar/${id}`)
+    axios.delete(api.baseURL+`/api/clientes/borrar/${id}`)
         .then(() => this.setState({ status: 'Borrado Exitoso' }));
 
 

@@ -3,6 +3,7 @@ const miesquema = mongoose.Schema;
 const esquemaPedidos = new miesquema({
     id: String,
     id_cliente: String,
+    fecha: String,
     valor: Number,
     activo: Boolean,
     id_cliente: {

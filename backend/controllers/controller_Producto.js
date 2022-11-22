@@ -37,9 +37,11 @@ router.post('/agregar',(req, res)=>{
 
     const nuevoProducto = new modeloProducto({
         id: req.body.id,
+        id_categoria: req.body.id_categoria,
         nombre: req.body.nombre,
         descripcion: req.body.descripcion,
-        precio: req.body.precio
+        precio: req.body.precio,
+        activo: req.body.activo
     })
 
     nuevoProducto.save(function(err){
@@ -60,7 +62,8 @@ router.put('/editar/:id',(req, res)=>{
     modeloProducto.findOneAndUpdate({id:req.params.id},{
             nombre: req.body.nombre,
             descripcion: req.body.descripcion,
-            precio: req.body.precio
+            precio: req.body.precio,
+            activo: req.body.activo
         },(err)=>
         {
             if(!err)
