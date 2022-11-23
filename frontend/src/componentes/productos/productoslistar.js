@@ -3,6 +3,8 @@ import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import ProductosBorrar from './productosborrar';
 import { api } from '../../config'
+import Encabezado from '../encabezado';
+import MenuLateral from '../menulateral';
 
 function ProductosListar()
 {
@@ -16,6 +18,10 @@ function ProductosListar()
     },[])
 
     return(
+    <div className="wrapper">
+        <Encabezado/>
+        <MenuLateral />
+        <div className="content-wrapper">
         <div className="container mt-5">
         <h4>Lista de Productos</h4>
         <div className="row">
@@ -52,6 +58,8 @@ function ProductosListar()
             </div>
         </div>
         </div>
+        </div>
+    </div>
     )
 
 };

@@ -3,6 +3,8 @@ import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import ClientesBorrar from './clientesborrar';
 import { api } from '../../config';
+import Encabezado from '../encabezado';
+import MenuLateral from '../menulateral';
 
 function ClientesListar()
 {
@@ -16,6 +18,10 @@ function ClientesListar()
     },[])
 
     return(
+    <div className="wrapper">
+        <Encabezado/>
+        <MenuLateral />
+        <div className="content-wrapper">
         <div className="container mt-5">
         <h4>Listado Clientes</h4>
         <div className="row">
@@ -54,6 +60,8 @@ function ClientesListar()
             </div>
         </div>
         </div>
+        </div>
+    </div>
     )
 
 }

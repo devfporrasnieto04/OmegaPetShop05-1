@@ -27,7 +27,7 @@ function PedidosAgregar()
 
     function pedidosInsertar()
     {
-        const productoinsertar = {
+        const pedidoinsertar = {
         id: uniquid(),
         id_cliente: id_cliente,
         fecha: fecha,
@@ -35,9 +35,9 @@ function PedidosAgregar()
         activo: activo
         }
     
-        console.log(productoinsertar)
+        console.log(pedidoinsertar)
 
-        axios.post(`${api.baseURL}/api/productos/agregar`,productoinsertar, config).then(res => {
+        axios.post(`${api.baseURL}/api/pedidos/agregar`,pedidoinsertar, config).then(res => {
             console.log(res.data)
             Swal.fire({ position: 'center', icon: 'success', title: '¡Registro agregado exitosamente!', showConfirmButton: false, timer: 1500 })
             navegar('/pedidoslistar')
